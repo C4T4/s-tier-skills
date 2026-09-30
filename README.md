@@ -1,4 +1,4 @@
-# Awesome S-Tier Skills [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# S-Tier Skills
 
 > Only the Claude skills that are actually worth installing.
 
