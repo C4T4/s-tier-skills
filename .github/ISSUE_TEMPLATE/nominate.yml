@@ -1,0 +1,69 @@
+name: Nominate a skill or agent
+description: Propose an entry for the list. Read the bar in CONTRIBUTING.md first.
+title: "[nominate] owner/repo"
+labels: ["nomination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Five tests, all must pass: does one hard thing · beats the base model ·
+        runs rather than advises · earns its context · alive or finished.
+
+        The **delta** field decides it. Nominations without a delta are closed.
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repo or path
+      placeholder: https://github.com/owner/name
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Skill
+        - Agent / subagent
+        - Both
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does
+      description: One sentence. A capability, not adjectives. No "powerful", no "comprehensive".
+      placeholder: Audits a codebase for injection, auth and secrets-handling flaws and writes a findings report.
+    validations:
+      required: true
+
+  - type: textarea
+    id: delta
+    attributes:
+      label: The delta
+      description: >
+        What did it produce that Claude does not produce without it? Paste both
+        outputs if you can, or describe the specific difference. This is the
+        field the decision is made on.
+    validations:
+      required: true
+
+  - type: textarea
+    id: weakest
+    attributes:
+      label: Its weakest test
+      description: Which of the five does it pass least convincingly, and why should it still get in?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirm
+      options:
+        - label: I have actually run this, not just read its README.
+          required: true
+        - label: It does one thing, not forty.
+          required: true
