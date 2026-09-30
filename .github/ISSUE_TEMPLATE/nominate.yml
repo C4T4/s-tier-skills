@@ -42,11 +42,17 @@ body:
   - type: textarea
     id: delta
     attributes:
-      label: The delta
+      label: The before/after
       description: >
-        What did it produce that Claude does not produce without it? Paste both
-        outputs if you can, or describe the specific difference. This is the
-        field the decision is made on.
+        Run the same prompt with and without the skill. Paste both outputs.
+        This is the field the decision is made on, and it goes into the README
+        verbatim if the entry is accepted.
+      value: |
+        **The prompt:**
+
+        **Without the skill:**
+
+        **With the skill:**
     validations:
       required: true
 

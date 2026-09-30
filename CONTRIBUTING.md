@@ -35,12 +35,13 @@ pushes.
 and answer three things:
 
 1. **What it does** — one sentence, a capability, no adjectives.
-2. **The delta** — what it produced that the base model did not. Paste both if you
-   can. This decides it.
+2. **The before/after** — the same prompt run with and without the skill. Paste
+   both outputs. This decides it, and it goes in the README verbatim.
 3. **Its weakest test** — and why it should still get in.
 
-Nominations without a delta are closed. That is not rudeness; it is the only thing
-keeping the list short.
+If a reader can't see the difference in five seconds, it is not an entry.
+Nominations without a before/after are closed. That is not rudeness; it is the
+only thing keeping the list short.
 
 ## How entries leave
 
