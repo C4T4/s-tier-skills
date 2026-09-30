@@ -2,9 +2,20 @@
 
 > Only the Claude skills that are actually worth installing.
 
-There are thousands of agent skills. Most are prompts in a trench coat. Four here,
-each with the before/after that shows what it actually changes. If you can't see
-the difference, it doesn't belong on the list.
+|  |  |
+|:---:|---|
+| ![S](https://img.shields.io/badge/S-FF7F7F?style=for-the-badge) | **[superpowers](#engineering)** · **[security-audit-skill](#security)** · **[humanizer](#writing)** · **[i-have-adhd](#accessibility)** |
+| ![A](https://img.shields.io/badge/A-FFBF7F?style=for-the-badge) | |
+| ![B](https://img.shields.io/badge/B-FFDF7F?style=for-the-badge) | |
+| ![C](https://img.shields.io/badge/C-FFFF7F?style=for-the-badge) | |
+| ![D](https://img.shields.io/badge/D-BFFF7F?style=for-the-badge) | |
+| ![F](https://img.shields.io/badge/F-7FBFFF?style=for-the-badge) | the other ~10,000 |
+
+Yes, only one row has anything in it. That is the entire point.
+
+A skill gets a spot by showing the same prompt run with and without it. If you
+can't see the difference in five seconds, it goes in the bottom row with everyone
+else.
 
 ## Contents
 
