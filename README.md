@@ -4,7 +4,7 @@
 
 |  |  |
 |:---:|---|
-| ![S](https://img.shields.io/badge/S-FF7F7F?style=for-the-badge) | **[superpowers](#engineering)** · **[security-audit-skill](#security)** · **[humanizer](#writing)** · **[i-have-adhd](#accessibility)** |
+| ![S](https://img.shields.io/badge/S-FF7F7F?style=for-the-badge) | **[superpowers](#engineering)** · **[gsd-core](#engineering)** · **[security-audit-skill](#security)** · **[humanizer](#writing)** · **[i-have-adhd](#accessibility)** |
 | ![A](https://img.shields.io/badge/A-FFBF7F?style=for-the-badge) | |
 | ![B](https://img.shields.io/badge/B-FFDF7F?style=for-the-badge) | |
 | ![C](https://img.shields.io/badge/C-FFFF7F?style=for-the-badge) | |
@@ -41,7 +41,21 @@ Spec → plan → execute, with the verification step it can't skip.
 
 The win: it can't tell you it's finished when it isn't.
 
-## Security
+### [gsd-core](https://github.com/open-gsd/gsd-core)
+
+Runs every phase in a fresh context, so a long build doesn't rot.
+
+> **You:** *Build the billing milestone.* (three days of work)
+
+| Without | With |
+|---|---|
+| One session. By hour three it re-reads files it already read, contradicts a decision it made in hour one, and quality drops without ever saying so. Then you `/clear` and **all of it is gone**. | Discuss → Plan → Execute → Verify → Ship, one phase at a time. Every executor starts on a **clean 200k context**, and decisions survive in `STATE.md` / `CONTEXT.md` across sessions and clears. |
+
+The win: the last hour is as good as the first.
+
+Unlike everything else here, it also runs on Codex, Cursor, Copilot and Windsurf.
+
+
 
 ### [security-audit-skill](https://github.com/cloudflare/security-audit-skill)
 
@@ -111,6 +125,13 @@ npx skills add https://github.com/obra/superpowers
 npx skills add https://github.com/cloudflare/security-audit-skill
 npx skills add https://github.com/blader/humanizer
 npx skills add https://github.com/ayghri/i-have-adhd
+```
+
+`gsd-core` is the exception — it ships its own installer for cross-runtime
+support, and copying its files by hand breaks it:
+
+```sh
+npx @opengsd/gsd-core@latest
 ```
 
 Or clone into `~/.claude/skills/` for every project, `.claude/skills/` for one.
